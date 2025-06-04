@@ -36,6 +36,31 @@
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
 	<!-- Tailwind CSS CDN -->
 	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+	@keyframes fade-in {
+		from { opacity: 0; transform: translateY(20px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	@keyframes pulse-pop {
+		0%, 100% { transform: scale(1); }
+		50% { transform: scale(1.08); }
+	}
+	@keyframes bounce-in {
+		0% { transform: scale(0.8); opacity: 0; }
+		60% { transform: scale(1.05); opacity: 1; }
+		80% { transform: scale(0.97); }
+		100% { transform: scale(1); }
+	}
+	.animate-fade-in {
+		animation: fade-in 0.7s cubic-bezier(0.4,0,0.2,1) both;
+	}
+	.animate-pulse-pop {
+		animation: pulse-pop 1.2s infinite;
+	}
+	.animate-bounce-in {
+		animation: bounce-in 0.6s cubic-bezier(0.4,0,0.2,1) both;
+	}
+	</style>
 	<script>
 		tailwind.config = {
 			theme: {
@@ -163,7 +188,7 @@
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<!-- Testimonio 1 -->
-				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl transition hover:shadow-lg">
+				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl transition hover:shadow-xl hover:-translate-y-2 duration-300 animate-fade-in">
 					<div class="w-16 h-16 flex items-center justify-center rounded-full mb-4 border-2 border-primary bg-blue-100 text-primary text-2xl font-bold select-none">E</div>
 					<div class="flex items-center justify-center mb-2">
 						<span class="material-symbols-rounded text-yellow-400 text-2xl">star</span>
@@ -178,7 +203,7 @@
 					<a href="https://maps.app.goo.gl/XYRR1fJfij9GvtBC6" target="_blank" class="text-blue-600 text-xs font-medium hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-base">open_in_new</span>Ver en Google</a>
 				</div>
 				<!-- Testimonio 2 -->
-				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl transition hover:shadow-lg">
+				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl transition hover:shadow-xl hover:-translate-y-2 duration-300 animate-fade-in" style="animation-delay:0.1s">
 					<div class="w-16 h-16 flex items-center justify-center rounded-full mb-4 border-2 border-primary bg-pink-100 text-pink-600 text-2xl font-bold select-none">D</div>
 					<div class="flex items-center justify-center mb-2">
 						<span class="material-symbols-rounded text-yellow-400 text-2xl">star</span>
@@ -193,7 +218,7 @@
 					<a href="https://maps.app.goo.gl/6YTXCpc7H9YD3ZUi9" target="_blank" class="text-blue-600 text-xs font-medium hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-base">open_in_new</span>Ver en Google</a>
 				</div>
 				<!-- Testimonio 3 -->
-				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl transition hover:shadow-lg">
+				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl transition hover:shadow-xl hover:-translate-y-2 duration-300 animate-fade-in" style="animation-delay:0.2s">
 					<div class="w-16 h-16 flex items-center justify-center rounded-full mb-4 border-2 border-primary bg-green-100 text-green-600 text-2xl font-bold select-none">Z</div>
 					<div class="flex items-center justify-center mb-2">
 						<span class="material-symbols-rounded text-yellow-400 text-2xl">star</span>
@@ -220,22 +245,22 @@
 				<p class="text-black text-left max-w-xl mt-2 text-2xl">Te acompañamos en cada etapa del proceso inmobiliario con soluciones a medida: <span class="text-secondary">ventas, alquileres, tasaciones y asesoría legal.</span> Descubrí cómo podemos ayudarte a concretar tus proyectos.</p>
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl min-h-[240px] transition hover:shadow-lg">
+				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl min-h-[240px] transition hover:shadow-xl hover:-translate-y-2 duration-300 animate-fade-in">
 					<span class="material-symbols-outlined text-5xl mb-5 bg-gray-100 rounded-full p-4" style="color: #9ca3af;">house</span>
 					<h3 class="font-bold text-xl mb-2 text-primary">Ventas</h3>
 					<p class="text-gray-700 text-base">Compra y venta de casas, departamentos y terrenos en Rosario y alrededores.</p>
 				</div>
-				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl min-h-[240px] transition hover:shadow-lg">
+				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl min-h-[240px] transition hover:shadow-xl hover:-translate-y-2 duration-300 animate-fade-in" style="animation-delay:0.1s">
 					<span class="material-symbols-outlined text-5xl mb-5 bg-blue-100 rounded-full p-4" style="color: #1976d2;">key</span>
 					<h3 class="font-bold text-xl mb-2 text-primary">Alquileres</h3>
 					<p class="text-gray-700 text-base">Gestión integral de alquileres residenciales y comerciales, con asesoría personalizada.</p>
 				</div>
-				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl min-h-[240px] transition hover:shadow-lg">
+				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl min-h-[240px] transition hover:shadow-xl hover:-translate-y-2 duration-300 animate-fade-in" style="animation-delay:0.2s">
 					<span class="material-symbols-outlined text-5xl mb-5 bg-pink-100 rounded-full p-4" style="color: #ec4899;">straighten</span>
 					<h3 class="font-bold text-xl mb-2 text-primary">Tasaciones</h3>
 					<p class="text-gray-700 text-base">Valoración profesional y precisa de tu propiedad, sin compromiso.</p>
 				</div>
-				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl min-h-[240px] transition hover:shadow-lg">
+				<div class="bg-white border border-gray-200 p-8 flex flex-col items-center text-center rounded-3xl min-h-[240px] transition hover:shadow-xl hover:-translate-y-2 duration-300 animate-fade-in" style="animation-delay:0.3s">
 					<span class="material-symbols-outlined text-5xl mb-5 bg-blue-200 rounded-full p-4" style="color: #60a5fa;">gavel</span>
 					<h3 class="font-bold text-xl mb-2 text-primary">Asesoría Legal</h3>
 					<p class="text-gray-700 text-base">Acompañamiento legal en todo el proceso inmobiliario, para tu tranquilidad.</p>
@@ -284,17 +309,17 @@
 						Renata
 						<span class="material-symbols-outlined text-base text-green-500">call</span>
 					</a>
-					<span class="text-sm text-gray-500 mb-2">Consultas</span>
+					<span class="text-sm text-gray-500 mb-2">Consultas y alquileres</span>
 					<p class="text-gray-600 text-base">Siempre lista para ayudarte a encontrar tu lugar.</p>
 				</div>
 				<div class="flex flex-col items-center text-center p-8 bg-white rounded-3xl border border-gray-100">
 					<img src="img/santi.jpg" alt="Santi" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-green-100" />
-					<a href="tel:+5493416298989" class="font-bold text-lg text-primary mb-1 hover:underline flex items-center gap-1">
+					<a href="#" class="font-bold text-lg text-primary mb-1 hover:underline flex items-center gap-1">
 						Santi
-						<span class="material-symbols-outlined text-base text-green-500">call</span>
+						<!--<span class="material-symbols-outlined text-base text-green-500">call</span>-->
 					</a>
-					<span class="text-sm text-gray-500 mb-2">Alquileres</span>
-					<p class="text-gray-600 text-base">Te asesora en cada paso del proceso de alquiler.</p>
+					<span class="text-sm text-gray-500 mb-2">El Jefe</span>
+					<p class="text-gray-600 text-base">Te asesora en cada paso del proceso de alquiler o venta.</p>
 				</div>
 				<div class="flex flex-col items-center text-center p-8 bg-white rounded-3xl border border-gray-100">
 					<img src="img/nico.png" alt="Nico" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-pink-100" />
@@ -354,7 +379,7 @@
 				<div class="flex flex-col gap-6 items-center md:items-start">
 					<div class="flex items-center gap-3">
 						<span class="material-symbols-outlined text-green-500 text-3xl">call</span>
-						<a href="https://api.whatsapp.com/send/?phone=5493416298989" target="_blank" class="text-lg font-medium text-primary hover:underline">WhatsApp: +54 9 341 629-8989</a>
+						<a href="https://api.whatsapp.com/send/?phone=5493412858989" target="_blank" class="text-lg font-medium text-primary hover:underline">WhatsApp: +54 9 341 285-8989</a>
 					</div>
 					<div class="flex items-center gap-3">
 						<span class="material-symbols-outlined text-primary text-3xl">mail</span>
@@ -415,9 +440,9 @@
 				</a>
 			</div>
 		</div>
-		<div class="container mx-auto px-4 mt-8 text-center text-xs text-primary/70">
+		<div class="container mx-auto px-4 mt-8 text-center text-xs text-primary/70 center">
 			<p>&copy; 2025 Sabolo & Asociados. Todos los derechos reservados.</p>
-			<p>Desarrollado por <span class="text-secondary">&#10084;</span> <a href="https://wearetonica.com?utm_source=saboloasociados" target="_blank" class="hover:underline">tónica</a></p>
+			<p>Creado por <span class="text-secondary">&#10084;</span> <a href="https://wearetonica.com?utm_source=saboloasociados" target="_blank" class="hover:underline">tónica</a></p>
 		</div>
 	</footer>
 
@@ -460,7 +485,7 @@
 			</div>
 		</div>
 		<!-- Botón flotante -->
-		<button id="wa-btn" onclick="document.getElementById('wa-popover').classList.toggle('hidden')" class="bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-green-400">
+		<button id="wa-btn" onclick="document.getElementById('wa-popover').classList.toggle('hidden')" class="bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-green-400 animate-pulse-pop animate-bounce-in">
 			<span aria-hidden="true" class="w-7 h-7 block">
 				<svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7">
 					<path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.08 2.34 7.09L4 29l7.18-2.29A12.93 12.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.98 0-3.89-.52-5.54-1.5l-.39-.23-4.27 1.36 1.4-4.15-.25-.4A9.94 9.94 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.13-7.47c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.97.95-.97 2.3 0 1.35.99 2.65 1.13 2.83.14.18 1.95 2.98 4.73 4.06.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/>
