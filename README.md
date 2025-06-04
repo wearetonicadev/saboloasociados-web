@@ -21,7 +21,7 @@ Landing page y portal de autogestión para inmobiliaria en Rosario, Argentina.
 - Secciones: Hero, ¿Por qué elegirnos?, Servicios, Testimonios, Equipo, FAQ, Contacto, Mapa.
 
 ## Contactos
-- WhatsApp: +54 9 341 629-8989 (Nico), +54 9 341 285-8989 (Santi, Renata)
+- WhatsApp: +54 9 341 285-8989 (Renata), +54 9 341 629-8989 (Santi), +54 9 341 564-5428 (Nico)
 - Email: inmobiliaria@saboloasociados.com.ar
 - Dirección: Corrientes 791 Piso 3. Oficina F, Rosario
 
